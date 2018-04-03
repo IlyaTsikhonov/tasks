@@ -34,7 +34,7 @@ public class Task implements Callable<BigInteger> {
         int startPos = number * RANGE;
         int endPos = startPos + RANGE;
         for (int i = startPos; i < endPos; i++) {
-            result = result.multiply(new BigInteger(Integer.toString(array[i])));//result *= array[i]
+            result = result.multiply(BigInteger.valueOf(array[i]));//result *= array[i]
         }
         return result;
     }
